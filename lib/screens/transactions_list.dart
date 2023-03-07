@@ -28,13 +28,13 @@ class _TransactionsListState extends State<TransactionsList> {
           centerTitle: true,
           title: Text("Transactions"),
         ),
-      body: ListView.builder(itemBuilder: (context, index){
+      body: ListView.builder(itemCount: items.length  , itemBuilder: (context, index){
         final item = items[index];
         return ListTile(
           leading : CircleAvatar(child: Text(item['id'].toString()),),
           title : Text(item['nom']),
           subtitle : Text(item['description']),
-          subtitle : Text(item['ministere']),
+          // subtitle : Text(item['ministere']),
         );
       },),
     );
